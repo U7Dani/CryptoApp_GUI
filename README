@@ -1,4 +1,4 @@
-🛡 CryptoApp GUI
+# 🛡 CryptoApp GUI
 
 **CryptoApp GUI** es una aplicación escrita en Python que permite experimentar y trabajar con diversos mecanismos criptográficos modernos a través de una interfaz gráfica intuitiva. Es ideal tanto para entornos educativos como profesionales, facilitando tareas como:
 
@@ -21,99 +21,110 @@ Su objetivo es acercar la criptografía práctica a estudiantes, analistas de ci
 
 Instálalas con pip:
 
-bash
+```bash
 pip install pycryptodome cryptography pyperclip
+```
 
-▶ Ejecución
-bash
-Copiar
-Editar
+### ▶ Ejecución
+
+```bash
 python "CryptoApp_GUI.py"
-✳ Funcionalidades
-🔒 Cifrado simétrico con AES (CBC/GCM), ChaCha20, ChaCha20-Poly1305
+```
 
-🔑 Cifrado asimétrico con RSA
+---
 
-✍️ Firma digital y verificación
+## ✳ Funcionalidades
 
-🧾 Hashing con SHA-2 y SHA-3
+- 🔒 Cifrado simétrico: AES (CBC/GCM), ChaCha20, ChaCha20-Poly1305
+- 🔑 Cifrado asimétrico: RSA
+- ✍️ Firma digital y verificación
+- 🧾 Hashing: SHA-2 y SHA-3
+- 🔏 HMAC
+- 🧬 Derivación de claves (PBKDF2)
+- 💾 Guardado y carga de claves
 
-🔏 HMAC
+---
 
-🧬 Derivación de claves (PBKDF2)
+## 🧪 Ejemplos paso a paso
 
-💾 Guardado y carga de claves
+### 1. 🔐 Cifrado Simétrico con AES-CBC
 
-🧪 Ejemplos paso a paso
-1. 🔐 Cifrado Simétrico con AES-CBC
-Mensaje: La contraseña de acceso es 4fTu#92x!
+**Mensaje de prueba:**  
+`La contraseña de acceso es 4fTu#92x!`
 
-Pasos:
+**Pasos:**
+- Pulsa `Generate Key`
+- Pulsa `Generate Nonce`
+- Selecciona `AES-CBC` y `PKCS7`
+- Pulsa `Encrypt`
 
-Generate Key
+📸  
+![Cifrado AES](img/cifrado_aes.png)
 
-Generate Nonce
+---
 
-Algoritmo: AES-CBC / Padding: PKCS7
+### 2. 🔏 Generar HMAC con SHA256
 
-Pulsar Encrypt
+**Pasos:**
+- Pega el mismo mensaje original
+- Usa la misma clave que generaste
+- Selecciona `sha256`
+- Pulsa `HMAC`
 
-📸 [Insertar imagen: cifrado_aes.png]
+📸  
+![HMAC](img/hmac.png)
 
-2. 🔏 Generar HMAC con SHA256
-Usamos el mismo mensaje original + la misma clave.
+---
 
-Pasos:
+### 3. 🔑 Cifrado y Descifrado con RSA
 
-Pegar mensaje
+**Pasos:**
+- Pulsa `Generate Key Pair`
+- Guarda `private_key.pem` y `public_key.pem`
+- Escribe: `Este mensaje está cifrado con clave pública RSA.`
+- Selecciona `public_key.pem` y pulsa `Encrypt`
+- Copia el resultado cifrado
+- Selecciona `private_key.pem` y pulsa `Decrypt`
 
-Seleccionar sha256
+📸  
+![Cifrado RSA](img/cifrado_rsa_encrypt.png)  
+![Descifrado RSA](img/cifrado_rsa_decrypt.png)
 
-Pulsar HMAC
+---
 
-📸 [Insertar imagen: hmac.png]
+### 4. 🧬 Derivación de clave con PBKDF2
 
-3. 🔑 Cifrado y Descifrado con RSA
-Generate Key Pair → Guarda private_key.pem y public_key.pem
+**Pasos:**
+- Selecciona `Key Size: 256`
+- Pulsa `Generate Master Key`
+- Pulsa `Generate Salt`
+- Pulsa `Derive Key`
+- Opcional: `Save Key` y `Load Key`
 
-Mensaje: Este mensaje está cifrado con clave pública RSA.
+📸  
+![Gestión de Claves](img/gestion_claves.png)
 
-Selecciona public_key.pem → Encrypt
+---
 
-Copia resultado y selecciona private_key.pem → Decrypt
+## 💼 Casos de uso reales
 
-📸 [Insertar imágenes: cifrado_rsa_encrypt.png, cifrado_rsa_decrypt.png]
+- Cifrado y envío seguro de mensajes
+- Verificación de integridad con HMAC
+- Protección de contraseñas mediante claves derivadas
+- Simulación de firma y verificación con RSA
+- Herramienta educativa para formación en criptografía moderna
 
-4. 🧬 Derivación de claves con PBKDF2
-Pasos:
+---
 
-Generate Master Key (256 bits)
+## 🙌 Agradecimientos
 
-Generate Salt
+Gracias a **Felipe de KeepCoding** por su guía en criptografía aplicada e inspiración en el desarrollo de esta herramienta.
 
-Derive Key
+---
 
-Opcional: Save Key / Load Key
+## 👨‍💻 Autor
 
-📸 [Insertar imagen: gestion_claves.png]
-
-💼 Casos de uso reales
-Cifrado de mensajes confidenciales
-
-Validación de integridad con HMAC
-
-Protección de contraseñas con claves derivadas
-
-Simulación de firmas digitales
-
-Aprendizaje práctico de criptografía moderna
-
-🙌 Agradecimientos
-Gracias a Felipe de KeepCoding por su enseñanza en criptografía aplicada y por inspirar esta herramienta durante el curso.
-
-👨‍💻 Autor
-Daniel (@U7Dani)
-GitHub: https://github.com/U7Dani
-
+**Daniel (@U7Dani)**  
+GitHub: [https://github.com/U7Dani](https://github.com/U7Dani)
 
 
