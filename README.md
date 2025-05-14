@@ -59,7 +59,8 @@ python "CryptoApp_GUI.py"
 - Pulsa `Encrypt`
 
 📸  
-![Cifrado AES](img/cifrado_aes.png)
+![image](https://github.com/user-attachments/assets/dd7d75b8-5718-49e4-a2b6-c26465542326)
+
 
 ---
 
@@ -72,7 +73,8 @@ python "CryptoApp_GUI.py"
 - Pulsa `HMAC`
 
 📸  
-![HMAC](img/hmac.png)
+![image](https://github.com/user-attachments/assets/b7e64028-9733-43b3-90db-91e63553f502)
+
 
 ---
 
@@ -87,8 +89,11 @@ python "CryptoApp_GUI.py"
 - Selecciona `private_key.pem` y pulsa `Decrypt`
 
 📸  
-![Cifrado RSA](img/cifrado_rsa_encrypt.png)  
-![Descifrado RSA](img/cifrado_rsa_decrypt.png)
+![image](https://github.com/user-attachments/assets/d66cdaba-3030-4ea8-b279-7f26cc5de643)
+
+![image](https://github.com/user-attachments/assets/33773767-e98a-4331-8e6c-d2676594635a)
+
+![image](https://github.com/user-attachments/assets/55d765e2-31c9-44a9-a0fa-cf6a17776a87)
 
 ---
 
@@ -102,7 +107,8 @@ python "CryptoApp_GUI.py"
 - Opcional: `Save Key` y `Load Key`
 
 📸  
-![Gestión de Claves](img/gestion_claves.png)
+![image](https://github.com/user-attachments/assets/5c6a766e-892c-4d3e-bb6d-981a8dcc5c21)
+
 
 ---
 
