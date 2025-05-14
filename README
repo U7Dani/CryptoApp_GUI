@@ -2,10 +2,10 @@
 
 **CryptoApp GUI** es una aplicación escrita en Python que permite experimentar y trabajar con diversos mecanismos criptográficos modernos a través de una interfaz gráfica intuitiva. Es ideal tanto para entornos educativos como profesionales, facilitando tareas como:
 
-* Cifrado y descifrado simétrico y asimétrico.
-* Generación de HMAC y hash.
-* Firma digital y verificación.
-* Derivación segura de claves con sal (salt).
+- 🔐 Cifrado y descifrado simétrico y asimétrico.
+- 🧾 Generación de HMAC y hash.
+- ✍️ Firma digital y verificación.
+- 🧬 Derivación segura de claves con sal (salt).
 
 Su objetivo es acercar la criptografía práctica a estudiantes, analistas de ciberseguridad (Blue Team), desarrolladores y entusiastas que deseen proteger información sensible de forma accesible.
 
@@ -14,8 +14,7 @@ Su objetivo es acercar la criptografía práctica a estudiantes, analistas de ci
 ## ⚙ Requisitos del sistema
 
 ### 🐍 Python
-
-* Python >= 3.10
+- Python >= 3.10
 
 ### 📦 Dependencias
 
@@ -23,140 +22,105 @@ Instálalas con pip:
 
 ```bash
 pip install pycryptodome cryptography pyperclip
-```
-
-### ▶ Ejecución
-
-```bash
+▶ Ejecución
+bash
+Copiar
+Editar
 python "CryptoApp_GUI.py"
-```
+✳ Funcionalidades
+🔒 Cifrado simétrico: AES (CBC/GCM), ChaCha20, ChaCha20-Poly1305
 
----
+🔑 Cifrado asimétrico: RSA
 
-## ✳ Funcionalidades
+✍️ Firma digital y verificación (RSA)
 
-* Cifrado simétrico con AES (CBC/GCM), ChaCha20, ChaCha20-Poly1305
-* Cifrado asimétrico con RSA
-* Firma digital y verificación con clave pública
-* Hashing con SHA-256, SHA-512, SHA3-256, SHA3-512
-* HMAC
-* Derivación de claves mediante PBKDF2 + Salt
-* Generación y almacenamiento seguro de claves
+🧾 Hashing: SHA-2 y SHA-3
 
----
+🔏 HMAC
 
-## 🧪 Ejemplos paso a paso
+🧬 Derivación de claves seguras (PBKDF2)
 
-### 1. 🔐 Cifrado Simétrico con AES-CBC + PKCS7
+💾 Guardado y carga de claves
 
-**Objetivo:** Cifrar un mensaje con una clave generada y un nonce aleatorio.
+🧪 Ejemplos paso a paso
+1. 🔐 Cifrado Simétrico con AES-CBC
+Mensaje de prueba:
+La contraseña de acceso es 4fTu#92x!
 
-#### Pasos:
+Pasos:
 
-* En "Cifrado Simétrico":
+Pulsa Generate Key
 
-  * Escribe: `La contraseña de acceso es 4fTu#92x!`
-  * Pulsa "Generate Key"
-  * Pulsa "Generate Nonce"
-  * Selecciona `AES-CBC` y `PKCS7`
-  * Pulsa `Encrypt`
+Pulsa Generate Nonce
 
-**Resultado:** Texto cifrado en base64
+Selecciona AES-CBC y PKCS7
 
-![Cifrado AES](img/cifrado_aes.png)
+Pulsa Encrypt
 
-### 2. 🔏 HMAC con SHA256
+📸
 
-**Objetivo:** Generar una firma HMAC para verificar integridad del mensaje original.
+2. 🔏 Generar HMAC con SHA256
+Pasos:
 
-#### Pasos:
+Pega el mismo mensaje original
 
-* En "Hashing y HMAC":
+Usa la misma clave que generaste
 
-  * Pega el mismo mensaje: `La contraseña de acceso es 4fTu#92x!`
-  * Usa la misma clave que en el paso anterior.
-  * Selecciona `sha256`
-  * Pulsa `HMAC`
+Selecciona sha256
 
-**Resultado:** Código HMAC SHA256
+Pulsa HMAC
 
-![HMAC](img/hmac.png)
+📸
 
-### 3. 🔐 Cifrado Asimétrico RSA
+3. 🔑 Cifrado y Descifrado con RSA
+Pasos:
 
-**Objetivo:** Enviar un mensaje cifrado con clave pública, que solo puede ser descifrado con la clave privada.
+Pulsa Generate Key Pair
 
-#### Pasos:
+Guarda private_key.pem y public_key.pem
 
-1. Pulsa `Generate Key Pair` y guarda:
-
-   * Clave privada: `private_key.pem`
-   * Clave pública: `public_key.pem`
-
-2. Escribe el mensaje:
-
-```
+Escribe:
 Este mensaje está cifrado con clave pública RSA.
-```
 
-3. Selecciona el archivo `.pem` de la clave pública
-4. Pulsa `Encrypt`
-5. Copia el resultado cifrado
-6. En el campo "Message", pégalo
-7. Selecciona `private_key.pem` y pulsa `Decrypt`
+Selecciona public_key.pem y pulsa Encrypt
 
-**Resultado:** El mensaje original descifrado correctamente
+Copia el resultado cifrado
 
-![Cifrado RSA](img/cifrado_rsa_encrypt.png)
-![Descifrado RSA](img/cifrado_rsa_decrypt.png)
+Selecciona private_key.pem y pulsa Decrypt
 
-### 4. 🧬 Derivación de claves seguras (PBKDF2)
+📸
 
-**Objetivo:** Derivar una clave criptográfica fuerte desde una clave maestra y una sal (salt).
 
-#### Pasos:
+4. 🧬 Derivación de clave con PBKDF2
+Pasos:
 
-1. En "Gestión de Claves":
+Selecciona Key Size: 256
 
-   * Selecciona `Key Size`: 256
-   * Pulsa `Generate Master Key`
-   * Pulsa `Generate Salt`
-   * Pulsa `Derive Key`
+Pulsa Generate Master Key
 
-**Resultado:** Clave derivada lista para usar
+Pulsa Generate Salt
 
-![Gestor de Claves](img/gestion_claves.png)
+Pulsa Derive Key
 
-#### 🔐 Guardar clave generada
+Opcional: Save Key y Load Key
 
-* Pulsa `Save Key` para almacenar en `.key`
-* Puedes cargarla luego con `Load Key`
+📸
 
----
+💼 Casos de uso reales
+Cifrado y envío seguro de mensajes
 
-## 💼 Casos de uso reales
+Verificación de integridad con HMAC
 
-* Cifrado de mensajes y datos confidenciales
-* Verificación de integridad con HMAC
-* Protección de contraseñas con derivación PBKDF2
-* Simulación de envío seguro usando RSA
-* Aprendizaje y formación en criptografía aplicada
+Protección de contraseñas mediante claves derivadas
 
----
+Simulación de firma y verificación con RSA
 
-## 🙌 Agradecimientos
+Herramienta educativa para formación en criptografía moderna
 
-Gracias a Felipe de KeepCoding por inspirar el desarrollo de esta herramienta durante el curso de Criptografía Aplicada. Esta aplicación resume de forma práctica todos los conocimientos aprendidos.
+🙌 Agradecimientos
+Gracias a Felipe de KeepCoding por su guía en criptografía aplicada e inspiración en el desarrollo de esta herramienta.
 
----
-
-## 🔗 Autor
-
-**Daniel (@U7Dani)**
-GitHub: [https://github.com/U7Dani](https://github.com/U7Dani)
-
----
-
-> "La mejor forma de aprender criptografía es construyendo con ella."
-
+👨‍💻 Autor
+Daniel (@U7Dani)
+GitHub: https://github.com/U7Dani
 
