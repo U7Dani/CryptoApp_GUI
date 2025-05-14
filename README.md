@@ -1,3 +1,6 @@
+![image](https://github.com/user-attachments/assets/f8e33077-83e7-40b9-a27f-7606740b235f)
+
+
 # 🛡 CryptoApp GUI
 
 **CryptoApp GUI** es una aplicación escrita en Python que permite experimentar y trabajar con diversos mecanismos criptográficos modernos a través de una interfaz gráfica intuitiva. Es ideal tanto para entornos educativos como profesionales, facilitando tareas como:
