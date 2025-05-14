@@ -1,4 +1,4 @@
-# 🛡 CryptoApp GUI
+🛡 CryptoApp GUI
 
 **CryptoApp GUI** es una aplicación escrita en Python que permite experimentar y trabajar con diversos mecanismos criptográficos modernos a través de una interfaz gráfica intuitiva. Es ideal tanto para entornos educativos como profesionales, facilitando tareas como:
 
@@ -21,7 +21,7 @@ Su objetivo es acercar la criptografía práctica a estudiantes, analistas de ci
 
 Instálalas con pip:
 
-```bash
+bash
 pip install pycryptodome cryptography pyperclip
 
 ▶ Ejecución
