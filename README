@@ -14,6 +14,7 @@ Su objetivo es acercar la criptografía práctica a estudiantes, analistas de ci
 ## ⚙ Requisitos del sistema
 
 ### 🐍 Python
+
 - Python >= 3.10
 
 ### 📦 Dependencias
@@ -22,105 +23,97 @@ Instálalas con pip:
 
 ```bash
 pip install pycryptodome cryptography pyperclip
+
 ▶ Ejecución
 bash
 Copiar
 Editar
 python "CryptoApp_GUI.py"
 ✳ Funcionalidades
-🔒 Cifrado simétrico: AES (CBC/GCM), ChaCha20, ChaCha20-Poly1305
+🔒 Cifrado simétrico con AES (CBC/GCM), ChaCha20, ChaCha20-Poly1305
 
-🔑 Cifrado asimétrico: RSA
+🔑 Cifrado asimétrico con RSA
 
-✍️ Firma digital y verificación (RSA)
+✍️ Firma digital y verificación
 
-🧾 Hashing: SHA-2 y SHA-3
+🧾 Hashing con SHA-2 y SHA-3
 
 🔏 HMAC
 
-🧬 Derivación de claves seguras (PBKDF2)
+🧬 Derivación de claves (PBKDF2)
 
 💾 Guardado y carga de claves
 
 🧪 Ejemplos paso a paso
 1. 🔐 Cifrado Simétrico con AES-CBC
-Mensaje de prueba:
-La contraseña de acceso es 4fTu#92x!
+Mensaje: La contraseña de acceso es 4fTu#92x!
 
 Pasos:
 
-Pulsa Generate Key
+Generate Key
 
-Pulsa Generate Nonce
+Generate Nonce
 
-Selecciona AES-CBC y PKCS7
+Algoritmo: AES-CBC / Padding: PKCS7
 
-Pulsa Encrypt
+Pulsar Encrypt
 
-📸
+📸 [Insertar imagen: cifrado_aes.png]
 
 2. 🔏 Generar HMAC con SHA256
+Usamos el mismo mensaje original + la misma clave.
+
 Pasos:
 
-Pega el mismo mensaje original
+Pegar mensaje
 
-Usa la misma clave que generaste
+Seleccionar sha256
 
-Selecciona sha256
+Pulsar HMAC
 
-Pulsa HMAC
-
-📸
+📸 [Insertar imagen: hmac.png]
 
 3. 🔑 Cifrado y Descifrado con RSA
+Generate Key Pair → Guarda private_key.pem y public_key.pem
+
+Mensaje: Este mensaje está cifrado con clave pública RSA.
+
+Selecciona public_key.pem → Encrypt
+
+Copia resultado y selecciona private_key.pem → Decrypt
+
+📸 [Insertar imágenes: cifrado_rsa_encrypt.png, cifrado_rsa_decrypt.png]
+
+4. 🧬 Derivación de claves con PBKDF2
 Pasos:
 
-Pulsa Generate Key Pair
+Generate Master Key (256 bits)
 
-Guarda private_key.pem y public_key.pem
+Generate Salt
 
-Escribe:
-Este mensaje está cifrado con clave pública RSA.
+Derive Key
 
-Selecciona public_key.pem y pulsa Encrypt
+Opcional: Save Key / Load Key
 
-Copia el resultado cifrado
-
-Selecciona private_key.pem y pulsa Decrypt
-
-📸
-
-
-4. 🧬 Derivación de clave con PBKDF2
-Pasos:
-
-Selecciona Key Size: 256
-
-Pulsa Generate Master Key
-
-Pulsa Generate Salt
-
-Pulsa Derive Key
-
-Opcional: Save Key y Load Key
-
-📸
+📸 [Insertar imagen: gestion_claves.png]
 
 💼 Casos de uso reales
-Cifrado y envío seguro de mensajes
+Cifrado de mensajes confidenciales
 
-Verificación de integridad con HMAC
+Validación de integridad con HMAC
 
-Protección de contraseñas mediante claves derivadas
+Protección de contraseñas con claves derivadas
 
-Simulación de firma y verificación con RSA
+Simulación de firmas digitales
 
-Herramienta educativa para formación en criptografía moderna
+Aprendizaje práctico de criptografía moderna
 
 🙌 Agradecimientos
-Gracias a Felipe de KeepCoding por su guía en criptografía aplicada e inspiración en el desarrollo de esta herramienta.
+Gracias a Felipe de KeepCoding por su enseñanza en criptografía aplicada y por inspirar esta herramienta durante el curso.
 
 👨‍💻 Autor
 Daniel (@U7Dani)
 GitHub: https://github.com/U7Dani
+
+
 
